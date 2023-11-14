@@ -1,0 +1,255 @@
+.skills-container {
+    grid-area: skills;
+    width: 100vw;
+
+
+    .skill-main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media(max-width: 992px) {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: var(--normal-font);
+            text-align: center;
+        }
+    }
+
+
+
+    .skill-left {
+        width: 80%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+
+
+        .skill-bar {
+            margin-bottom: 2.3rem;
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+            }
+
+            .bar {
+                width: 100%;
+                height: 10px;
+                background-color: var(--second-bg-color);
+                border-radius: 25px;
+                margin-bottom: 10px;
+                position: relative;
+
+                span {
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    background-color: var(--over-color);
+                    border-radius: 25px;
+                    box-shadow: var(--neon-box-shadow);
+                }
+
+                .html5 {
+                    width: 90%;
+                    animation: html5 2s;
+                }
+
+                .css {
+                    width: 85%;
+                    animation: css 3s;
+                }
+
+                .javascript {
+                    width: 75%;
+                    animation: javascript 4s;
+                }
+
+                .sql {
+                    width: 100%;
+                    animation: sql 5s;
+                }
+
+                .c {
+                    width: 90%;
+                    animation: c 6s;
+                }
+
+                .java {
+                    width: 80%;
+                    animation: java 7s;
+                }
+
+                .python {
+                    width: 95%;
+                    animation: python 8s;
+                }
+
+                @keyframes html5 {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 90%;
+                    }
+
+                }
+
+                @keyframes css {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 85%;
+                    }
+
+                }
+
+                @keyframes javascript {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 72%;
+                    }
+
+                }
+
+                @keyframes sql {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 100%;
+                    }
+
+                }
+
+                @keyframes c {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 90%;
+                    }
+
+                }
+
+                @keyframes java {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 80%;
+                    }
+
+                }
+
+                @keyframes python {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 95%;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .skill-right {
+        width: 80%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        .professional {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @include desktop {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+
+            .box {
+                margin: 10px 0;
+                flex: 1 1 15rem;
+                position: relative;
+
+                .circle {
+                    width: 100%;
+                    height: 120px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .points {
+                        width: 2px;
+                        height: 10px;
+                        background-color: var(--bg-color);
+                        position: absolute;
+                        border-radius: 3px;
+                        transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+
+                        &.marked {
+                            animation: glow 0.04s linear forwards;
+                            animation-delay: calc(var(--i)*0.05s);
+                        }
+                    }
+
+                    @keyframes glow {
+                        0% {
+                            background: var(--bg-color);
+                            box-shadow: none;
+                        }
+
+                        100% {
+                            background: var(--over-color);
+                            box-shadow: var(--neon-box-shadow2);
+                        }
+
+                    }
+                }
+
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1rem;
+
+                    big {
+                        font: 400;
+                        letter-spacing: 1px;
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    small {
+                        display: block;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

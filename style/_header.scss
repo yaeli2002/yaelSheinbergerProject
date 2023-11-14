@@ -1,0 +1,121 @@
+ .header-container {
+     grid-area: header;
+     width: 100vw;
+
+
+     .upper {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 100vw;
+         height: 11vh;
+         padding: 20px 5vw;
+         position: fixed;
+         background-color: var(--bg-color);
+         border-top: 5px solid #12f7ff;
+         z-index: 500;
+
+         .myName {
+             font-size: 26px;
+             font-weight: 700;
+             letter-spacing: 1px;
+             color: #fff;
+
+             @media (max-width:370px) {
+                 font-size: 1rem;
+             }
+
+             img {
+                 border-radius: 50%;
+                 width: 40px;
+                 height: 40px;
+                 border: 1px solid var(--over-color);
+                 margin-right: 10px;
+
+                 @media (max-width:370px) {
+                     width: 25px;
+                     height: 25px;
+                 }
+             }
+
+         }
+
+
+         nav {
+             .nav-list {
+                 list-style-type: none;
+                 display: flex;
+
+                 li a {
+                     color: var(--text-color);
+                     font-weight: 500;
+                     padding: 10px 20px;
+
+                     &:hover {
+                         color: var(--over-color);
+
+                         text-shadow:
+                             0 0 10px rgba(18, 247, 255, 0.6),
+                             0 0 30px rgba(18, 247, 255, 0.6),
+                             0 0 40px rgba(18, 247, 255, 0.6),
+                             0 0 70px rgba(18, 247, 255, 0.6),
+                             0 0 80px rgba(18, 247, 255, 0.6),
+                             0 0 100px rgba(18, 247, 255, 0.6),
+                             0 0 150px rgba(18, 247, 255, 0.6);
+                     }
+
+                     @include desktop {
+                         display: block;
+                         padding-bottom: 1rem;
+                         font-size: 1rem;
+                     }
+
+                 }
+
+
+                 @include desktop {
+                     display: flex;
+                     position: absolute;
+                     top: -1000px;
+                     right: 0;
+                     left: 0;
+                     flex-direction: column;
+                     background: var(--bg-color);
+                     text-align: left;
+                     padding: 0 5%;
+                     transition: all 0.45s ease;
+
+                     &.open {
+                         top: 100%;
+                     }
+                 }
+             }
+         }
+
+         #menu-icon {
+             font-size: 1.8rem;
+             z-index: 10001;
+             cursor: pointer;
+             /* margin-left: 25px;*/
+             background: var(--text-color);
+             border-radius: 3px;
+             color: var(--second-bg-color);
+             display: none;
+
+             @include desktop {
+                 display: block;
+                 transition: all .4s ease;
+
+                 &.bx-x {
+                     transform: rotate(-180deg);
+                 }
+             }
+         }
+
+         @include desktop {
+             padding: 15px 5vw;
+         }
+     }
+
+
+ }

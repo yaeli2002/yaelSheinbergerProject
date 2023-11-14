@@ -1,0 +1,155 @@
+ @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@500&family=Satisfy&family=Varela+Round&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+ }
+
+ body {
+     width: 100vw;
+     height: 100vh;
+ }
+
+ .image {
+     position: relative;
+     top: 0;
+     width: 60vw;
+     height: 100vh;
+ }
+
+ img {
+     width: 100%;
+     height: 100%;
+     border: 1px solid #707070;
+ }
+
+ .box-text {
+     top: 0;
+     left: 60vw;
+     width: 40vw;
+     height: 100vh;
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .box-text section {
+     width: 70%;
+     height: 50%;
+     text-align: right;
+     direction: rtl;
+ }
+
+ .box-text section h1 {
+     font: normal normal 900 43px/63px Heebo;
+     color: #020253;
+     margin-bottom: 5%;
+ }
+
+ .box-text section p {
+     font: normal normal normal 20px/29px Heebo;
+     color: #020253;
+     width: 100%;
+     margin-bottom: 5%;
+ }
+
+ .box-text section form {
+     width: 100%;
+     height: 40%;
+ }
+
+ .box-text section form label {
+     width: 100%;
+     font: normal normal bold 16px/24px Heebo;
+     color: #2C2C2C;
+ }
+
+ .box-text section form input {
+     width: 100%;
+     height: 27%;
+     background: #E5EEFF 0% 0% no-repeat padding-box;
+     border: none;
+     border-bottom: 4px solid #020253;
+ }
+
+ .box-text section form .send {
+     width: 45%;
+     background: #020253 0% 0% no-repeat padding-box;
+     border-bottom: none;
+     font: normal normal bold 22px/30px Heebo;
+     letter-spacing: 0.33px;
+     color: #FFFFFF;
+ }
+
+ input[type="text"] {
+     font: normal normal 20px/29px Heebo;
+     color: #020253;
+     text-align: right;
+     padding: 10px;
+ }
+
+ @media (max-width: 768px) {
+     .image {
+         position: relative;
+         top: 0;
+         width: 100vw;
+         height: 30vh;
+     }
+
+     .box-text {
+         top: 30vh;
+         left: 0;
+         width: 100vw;
+         height: 70vh;
+     }
+
+     .box-text section {
+         width: 80%;
+         height: 80%;
+     }
+
+     .box-text section form .send {
+         width: 100%;
+     }
+
+     .box-text section h1 {
+         font: normal normal 900 28px/41px Heebo;
+     }
+
+     .box-text section p {
+         font: normal normal normal 15px/22px Heebo;
+     }
+ }
+
+ @media (max-width: 992px) {
+     .image {
+         position: relative;
+         top: 0;
+         width: 100vw;
+         height: 30vh;
+     }
+
+     .box-text {
+         top: 30vh;
+         left: 0;
+         width: 100vw;
+         height: 70vh;
+     }
+
+     .box-text section {
+         width: 80%;
+         height: 80%;
+     }
+
+     .box-text section form input {
+         margin-bottom: 5%;
+     }
+
+     .box-text section form .send {
+         width: 100%;
+     }
+
+ }

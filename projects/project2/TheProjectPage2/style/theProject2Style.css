@@ -1,0 +1,154 @@
+ @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Heebo:wght@100;300;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@500&family=Satisfy&family=Varela+Round&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ .bgc-image {
+     width: 100vw;
+     height: 100vh;
+     background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+     background-size: cover;
+ }
+
+ .input-group {
+     direction: rtl;
+     top: 70vh
+ }
+
+ .text-container {
+     width: 80%;
+     height: 70vh;
+     margin: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .text-container h1 {
+     font: normal normal normal 160px/231px Satisfy;
+     color: #FFFFFF;
+     text-shadow: 0px 0px 36px #00000087;
+ }
+
+ .text-container h2 {
+     font: normal normal normal 32px/38px Varela Round;
+     color: #FFFFFF;
+ }
+
+ .text-container p {
+     width: 100%;
+     font: normal normal normal 16px/20px Varela Round;
+     color: #F9F9F9;
+     direction: rtl;
+     text-align: center;
+ }
+
+ form {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     flex-direction: row;
+ }
+
+ .content-name,
+ .content-email {
+     padding-left: 1.5em;
+ }
+
+ label {
+     width: 450px;
+     text-align: right;
+     font: normal normal normal 16px/20px Varela Round;
+     color: #F9F9F9;
+ }
+
+
+ input[type="text"] {
+     width: 418px;
+     height: 50px;
+     background: #F6F6F624 0% 0% no-repeat padding-box;
+     border: 2px solid #FFFFFF;
+
+ }
+
+ input[type="submit"] {
+     width: 206px;
+     height: 50px;
+     background: #FFFFFF 0% 0% no-repeat padding-box;
+     font: normal normal normal 16px/20px Varela Round;
+     color: #1C1C1C;
+     border: none;
+ }
+
+ @media (max-width:992px) {
+     body {
+         text-align: center;
+     }
+
+     .bgc-image {
+         height: 100vh;
+     }
+
+     .text-container {
+         width: 100vw;
+         height: 60vh;
+     }
+
+     .text-container>h1 {
+         font: normal normal normal 60px/86px Satisfy;
+         text-shadow: 0px 0px 36px #00000087;
+         margin-bottom: 0.5em;
+     }
+
+     .text-container>h2 {
+         font: normal normal normal 18px/22px Varela Round;
+     }
+
+     .text-container>p {
+         font: normal normal normal 16px/20px Varela Round;
+         margin-top: 20px;
+
+     }
+
+     form {
+         display: flex;
+         width: 100vw;
+         height: 40vh;
+         align-items: center;
+         flex-direction: column;
+     }
+
+     label {
+         width: 100%;
+         height: 5%;
+         text-align: right;
+         display: flex;
+     }
+
+     .content-email,
+     .content-name,
+     .content-submit {
+         width: 90%;
+         height: 15%;
+         padding-left: 0;
+         margin-bottom: 10%;
+     }
+
+     input[type="text"] {
+         width: 100%;
+         height: 100%;
+     }
+
+     input[type="submit"] {
+         width: 100%;
+         height: 100%;
+         justify-content: center;
+         font: normal normal normal 11px/13px Varela Round;
+         color: #2823FD;
+     }
+
+ }

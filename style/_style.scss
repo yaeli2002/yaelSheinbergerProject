@@ -1,0 +1,157 @@
+/*$overColor: #00eaff;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    /*border: 3px solid pink;*/
+}
+
+:root {
+    --text-color: #f5f5f5;
+    --over-color: #14f7ff;
+    --bg-color: #250821;
+    --second-bg-color: #292e33;
+    --big-font: 2.5rem;
+    --normal-font: 2rem;
+    --small-font: 1.5rem;
+    --neon-box-shadow: 0 0 .5rem #12f7ff;
+    --neon-box-shadow2: 0 0 2rem #12f7ff;
+    --h2-font: 3rem;
+    --font-neon-text-shadow: 0 0 10px rgba(18, 247, 255, 0.3),
+        0 0 20px rgba(18, 247, 255, 0.3),
+        0 0 30px rgba(18, 247, 255, 0.3),
+        0 0 40px rgba(18, 247, 255, 0.3),
+        0 0 70px rgba(18, 247, 255, 0.3),
+        0 0 80px rgba(18, 247, 255, 0.3),
+        0 0 100px rgba(18, 247, 255, 0.3),
+        0 0 150px rgba(18, 247, 255, 0.3);
+}
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--second-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--over-color);
+    border-radius: 5rem;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+/*.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 11vh 89vh 100vh 100vh 100vh 105vh 40px;
+    grid-template-areas:
+        "header"
+        "opening"
+        "about"
+        "skills"
+        "galery-projects"
+        "contact"
+        "bottom";
+    border-bottom: 5px solid #12f7ff;
+
+    @media (max-width:992px) {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 11vh 89vh 110vh 170vh 270vh 105vh 50px;
+        grid-template-areas:
+            "header"
+            "opening"
+            "about"
+            "skills"
+            "galery-projects"
+            "contact"
+            "bottom";
+    }*/
+
+/* @media (max-width:768px) {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 11vh 89vh 180vh 170vh 270vh 105vh 40px;
+        grid-template-areas: "header"
+            "opening"
+            "about"
+            "skills"
+            "galery-projects"
+            "contact"
+            "bottom";
+    }*/
+
+/*@media (max-width:576px) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 11vh 89vh 140vh 150vh 270vh 105vh 40px;
+    grid-template-areas: "header"
+    "opening"
+    "about"
+    "skills"
+    "galery-projects"
+    "contact"
+    "bottom";
+}
+}*/
+
+
+
+span {
+    color: var(--over-color);
+}
+
+.section-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--over-color);
+
+    h2 {
+        font-weight: 700;
+        font-size: var(--normal-font);
+    }
+
+    span {
+        color: #fdfdfd;
+        font-size: 0.8rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+//Media
+@mixin desktop {
+    @media(max-width:992px) {
+
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:576px) {
+        @content;
+    }
+}
