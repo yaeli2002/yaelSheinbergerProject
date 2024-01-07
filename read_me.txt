@@ -22,7 +22,7 @@ In each project directory, you will find two subdirectories:
 
 - **explanationPage:** contains an html file which is the page representing the task, and also contains the design folders for this page.
 
-- **TheProjectPage:** A folder contains the project page and also folders for designing this page.
+- **TheProjectPage:** A folder contains the project page and also folders for designing this page and also the scipt of this page.
 
 ## Installation and Running
 

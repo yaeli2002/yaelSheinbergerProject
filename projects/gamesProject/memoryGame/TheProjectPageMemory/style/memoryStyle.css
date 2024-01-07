@@ -237,23 +237,16 @@ button {
 @media (max-width:768px) {
     .stats-container {
         width: 80vmin;
-        height: 100px;
-        text-align: center;
-        flex-direction: row;
-        justify-content: center;
         top: 5vh;
-        font-size: 2em;
-        font-weight: 700;
-        left: 50%;
-        transform: translate(-50%, 2%);
+        font-size: 1em;
     }
 
 }
 
 @media (max-width:540px) {
-    .stats-container {
-        top: 0;
+    @media (max-height:720px) {
+        .stats-container {
+            top: 0;
+        }
     }
 }
-
-/*@media (max-width: 430px) {}*/

@@ -63,13 +63,6 @@ body {
 }
 
 
-
-/*.score,
-.high-score {
-    height: 100%;
-    width: 50%;
-}*/
-
 .game-container {
     width: 100%;
     height: 80%;
@@ -82,21 +75,7 @@ body {
     background-color: #40d36f;
 }
 
-/*.game-container .food {
-    background-color: red;
-    max-width: 100%;
-    max-height: 100%;
-}*/
 
-/*.button-option {
-    background: #fff;
-    color: #000;
-    border: 2px solid #000;
-    border-radius: 10px;
-    font-size: 12.5vmin;
-}*/
-
-/*#restart,*/
 #start-game {
     margin: 0.5em auto;
     display: block;
@@ -170,4 +149,17 @@ body {
 .image-fruit {
     width: 12px;
     height: auto;
+}
+
+
+@media (max-width:540px) {
+    .game-details {
+        font-size: 0.8em;
+        font-weight: 400;
+        padding: 0 27px;
+    }
+
+    #restart-btn {
+        height: 80%;
+    }
 }
