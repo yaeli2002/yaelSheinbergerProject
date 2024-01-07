@@ -1,128 +1,288 @@
 .projects-galery {
-    grid-area: galery-projects;
+    .fillter-bottons {
+        margin: 2rem;
+        text-align: center;
 
-    .projects-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 37vh 37vh;
-        grid-template-areas: "project1 project2 project3" "project4 project5 project6";
-        gap: 2em;
+        .btn {
+            background-color: none;
+            outline: none;
+            cursor: pointer;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 1.3rem;
 
-        @media (max-width:992px) {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 37vh);
-            grid-template-areas: "project1" "project2" "project3" "project4" "project5" "project6";
+            color: var(--text-color);
+
+            &:hover {
+                color: var(--over-color);
+            }
         }
 
-        .projectImage {
-            border-radius: 10px;
-            border: 3px outset var(--over-color);
-            margin: 0 auto;
-            overflow: hidden;
-            /* Relative positioning for child elements */
-            position: relative;
-            z-index: 1;
-            /* Establish stacking context */
+    }
 
-            &:hover figcaption {
-                /* Show the caption on hover */
-                opacity: 1;
-                /* Move the caption up to make it visible */
-                transform: translateY(0);
+    .page-container,
+    .game-container {
+
+        .page-projects-container,
+        .game-projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 37vh 37vh;
+            grid-template-areas: "project1 project2 project3" "project4 project5 project6";
+            gap: 2em;
+
+
+            @media (max-width:992px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 37vh);
+                grid-template-areas: "project1" "project2" "project3" "project4" "project5" "project6";
             }
 
-            figcaption {
-                width: 410px;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                background: linear-gradient(rgba(37, 8, 33, .9), #14f7ffe6);
-                color: #fff;
-                padding: 0 2rem;
-                line-height: 2;
-                box-shadow: var(--neon-box-shadow2);
-                /* Hide the caption by default */
-                opacity: 0;
-                /* Smooth transition */
-                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-                /* Absolute positioning for precise placement */
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                /* Start below the image */
-                transform: translateY(100%);
-                /* Above the image but below other content */
-                z-index: 2;
-
-                h3 {
-                    font-size: 2em;
-
-                    @include desktop {
-                        font-size: 3em;
-                    }
 
 
-                    @include mobile {
-                        font-size: 1.2em;
-                    }
+            .projectImage {
+                border-radius: 10px;
+                border: 3px outset var(--over-color);
+                margin: 0 auto;
+                overflow: hidden;
+                /* Relative positioning for child elements */
+                position: relative;
+                z-index: 1;
+                /* Establish stacking context */
+
+                &:hover {
+                    transform: scale(1.10);
                 }
 
-                p {
-                    font-size: 0.8em;
-
-                    @include desktop {
-                        font-size: 1em;
-                    }
-
-                    @include mobile {
-                        font-size: .6em;
-                    }
-
+                &:hover figcaption {
+                    /* Show the caption on hover */
+                    opacity: 1;
+                    /* Move the caption up to make it visible */
+                    transform: translateY(0);
                 }
 
-                a {
-                    background: var(--over-color);
-                    display: inline-flex;
-                    justify-content: center;
+
+                figcaption {
+                    width: 410px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    border-radius: 50%;
-                    width: 50px;
-                    height: 50px;
-                    outline: 3px solid #fff;
+                    justify-content: center;
+                    text-align: center;
+                    background: linear-gradient(rgba(37, 8, 33, .9), var(--over-color));
+                    color: #fff;
+                    padding: 0 2rem;
+                    line-height: 2;
+                    box-shadow: var(--neon-box-shadow2);
+                    /* Hide the caption by default */
+                    opacity: 0;
+                    /* Smooth transition */
+                    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+                    /* Absolute positioning for precise placement */
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    /* Start below the image */
+                    transform: translateY(100%);
+                    /* Above the image but below other content */
+                    z-index: 2;
 
-                    i {
-                        font-size: 1.5rem;
-                        color: var(--bg-color);
+                    h3 {
+                        font-size: 2em;
+
+                        @include desktop {
+                            font-size: 3em;
+                        }
+
+
+                        @include mobile {
+                            font-size: 1.2em;
+                        }
                     }
 
+                    p {
+                        font-size: 0.8em;
+
+                        @include desktop {
+                            font-size: 1em;
+                        }
+
+                        @include mobile {
+                            font-size: .6em;
+                        }
+
+                    }
+
+                    a {
+                        background: var(--over-color);
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        outline: 3px solid #fff;
+
+                        i {
+                            font-size: 1.5rem;
+                            color: var(--bg-color);
+                        }
+
+                    }
+
+                    @include desktop {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
-                @include desktop {
+                img {
+                    width: 410px;
+                    height: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                    border: 1px solid var(--bg-color);
+                    z-index: 1;
+
+                    @include desktop {
+                        width: 80vw;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .game-container {
+        margin-top: 3.5rem;
+
+        /*.game-projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 37vh 37vh;
+            grid-template-areas: "project1 project2 project3" "project4 project5 project6";
+            gap: 4em;
+
+             @media (max-width:992px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 37vh);
+                grid-template-areas: "project1" "project2" "project3" "project4" "project5" "project6";
+            }
+
+            .projectImage {
+                width: 80%;
+                border-radius: 10px;
+                border: 3px outset var(--over-color);
+                margin: 0 auto;
+                /*overflowx: hidden;*
+                /* Relative positioning for child elements *
+                position: relative;
+                z-index: 1;
+                /* Establish stacking context *
+
+                &:hover figcaption {
+                    /* Show the caption on hover *
+                    opacity: 1;
+                    /* Move the caption up to make it visible *
+                    transform: translateY(0);*
+                    transform: rotate(360deg);
+                    border: 3px dotted var(--over-color);
+                }
+
+                &:hover {
+                    transform: scale(1.10);
+                }
+
+                figcaption {
+                    width: 60%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    /*  background: linear-gradient(rgba(37, 8, 33, .9), var(--over-color));*
+                    background: var(--bg-color);
+                    border-radius: 50%;
+                    color: #fff;
+                    padding: 0 1rem;
+                    line-height: 2;
+                    /*box-shadow: var(--neon-box-shadow2);*
+                    /* Hide the caption by default *
+                    /*opacity: 0;*
+                    /* Smooth transition *
+                    border: 3px solid var(--over-color);
+                    /* transition: opacity 0.3s ease-in-out,
+                     transform 0.3s ease-in-out;*
+                    transition: transform 0.5s ease;
+                    /* Absolute positioning for precise placement *
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    /* Start below the image *
+                    transform: translate(80%) translateY(25%);
+
+                    /* Above the image but below other content *
+                    z-index: 2;
+
+                    h3 {
+                        font-size: 1.5em;
+
+                        @include desktop {
+                            font-size: 3em;
+                        }
+
+
+                        @include mobile {
+                            font-size: 1.2em;
+                        }
+                    }
+
+                    a {
+                        background: var(--over-color);
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        outline: 3px solid #fff;
+
+                        i {
+                            font-size: 1.5rem;
+                            color: var(--bg-color);
+                        }
+
+                    }
+
+                    @include desktop {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                img {
                     width: 100%;
                     height: 100%;
-                }
-            }
+                    border-radius: 10px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                    border: 1px solid var(--bg-color);
+                    z-index: 1;
 
-            img {
-                width: 410px;
-                /* height: 270px;*/
-                height: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: top right;
-                border: 1px solid var(--bg-color);
-                z-index: 1;
-
-                @include desktop {
-                    width: 80vw;
-                    /*  height: 270px;*/
-                    height: 100%;
+                    @include desktop {
+                        width: 80vw;
+                        height: 100%;
+                    }
                 }
             }
         }
+        }*/
     }
 }

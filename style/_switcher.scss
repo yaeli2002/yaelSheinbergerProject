@@ -1,0 +1,77 @@
+.style-switcher {
+    width: 200px;
+    position: fixed;
+    right: 0;
+    top: 85px;
+    padding: 15px;
+    border: 1px solid var(--second-bg-color);
+    background-color: var(--text-color);
+    z-index: 100;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+
+    &.open {
+        transform: translateX(-25px);
+    }
+
+    h4 {
+        color: var(--bg-color);
+        text-align: left;
+        font-size: 1em;
+        /*  text-transform: capitalize;*/
+    }
+
+    .toogler-color {
+        /* font-size: 30px;*/
+    }
+
+    .s-icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        right: 100%;
+        color: var(--over-color);
+        border: 1px solid var(--second-bg-color);
+        margin-right: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 50%;
+
+        i {
+            line-height: 40px;
+        }
+    }
+
+
+    .colors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid var(--bg-color);
+        }
+
+        .color-1 {
+            background-color: #14f7ff;
+        }
+
+        .color-2 {
+            background-color: #14ff2f;
+        }
+
+        .color-3 {
+            background-color: #feee0f;
+        }
+
+
+
+    }
+}

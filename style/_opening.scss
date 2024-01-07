@@ -1,14 +1,13 @@
 .opening-container {
-    grid-area: opening;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url("../images/code_tree.png");
-    background-size: cover;
+    background-size: 1600px;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: 50% 100%;
 
     .opening_text {
         color: #fff;

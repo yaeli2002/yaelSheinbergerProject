@@ -1,3 +1,8 @@
+let openingAnimation = document.querySelector(".opening-container");
+window.addEventListener("scroll", () => {
+    openingAnimation.style.backgroundSize = `${window.scrollY * 1.8 + 1600}px`
+});
+
 /******************************************************about script******************************************************* */
 let words = document.querySelectorAll(".word");
 words.forEach((word) => {
@@ -47,7 +52,7 @@ setInterval(changeText, 2000)
 /********************************************Skills script******************************************** */
 
 
-const circles = document.querySelectorAll('.circle');
+/*const circles = document.querySelectorAll('.circle');
 circles.forEach(elem => {
     var dots = elem.getAttribute("data-dots");
     var marked = elem.getAttribute("data-percent");
@@ -66,7 +71,41 @@ circles.forEach(elem => {
         pointsMarked[i].classList.add('marked');
     }
 
-})
+})*/
+
+// Wrap your JavaScript code inside a function
+function applySkillsAnimation() {
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(elem => {
+        var dots = elem.getAttribute("data-dots");
+        var marked = elem.getAttribute("data-percent");
+        var percent = Math.floor(dots * marked / 100);
+        var points = "";
+        var rotate = 360 / dots;
+
+        for (let i = 0; i < dots; i++) {
+            points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+        }
+        elem.innerHTML = points;
+
+        const pointsMarked = elem.querySelectorAll('.points');
+
+        for (let i = 0; i < percent; i++) {
+            pointsMarked[i].classList.add('marked');
+        }
+    });
+}
+
+// Add an event listener to run the applySkillsAnimation function when the user scrolls within the "skills" area
+document.addEventListener("scroll", function () {
+    const skillsContainer = document.getElementById("skills");
+    const skillsContainerRect = skillsContainer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (skillsContainerRect.top < windowHeight && skillsContainerRect.bottom > 0) {
+        applySkillsAnimation();
+    }
+});
 
 
 /*******************************************Menu script**************************************************************** */
@@ -83,4 +122,30 @@ window.onscroll = () => {
     navList.classList.remove("open");
 }
 
-/**************************************************************************************************************/
+/*******************************************End menu script**********************************************/
+/*******************************Toogler style switcher*************************************************/
+const styleSwitcherToogler = document.querySelector(".toogler-color");
+styleSwitcherToogler.addEventListener("click", () => {
+    document.querySelector(".style-switcher").classList.toggle("open");
+});
+
+//Design so that when the user scrolls the page then the color menu will close.
+window.addEventListener("scroll", () => {
+    if (document.querySelector(".style-switcher").classList.contains("open")) {
+        document.querySelector(".style-switcher").classList.remove("open");
+    }
+});
+
+//Choosing the color, and changing the color accordingly.
+const alternateStyle = document.querySelectorAll(".alternate-style");
+function setActiveStyle(color) {
+    alternateStyle.forEach((style) => {
+        if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        }
+        else {
+            style.setAttribute("disabled", "true");
+
+        }
+    });
+}

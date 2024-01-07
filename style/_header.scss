@@ -1,5 +1,4 @@
  .header-container {
-     grid-area: header;
      width: 100vw;
 
 
@@ -12,7 +11,7 @@
          padding: 20px 5vw;
          position: fixed;
          background-color: var(--bg-color);
-         border-top: 5px solid #12f7ff;
+         border-top: 5px solid var(--over-color);
          z-index: 500;
 
          .myName {

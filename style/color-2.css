@@ -1,0 +1,20 @@
+:root {
+    --text-color: #f5f5f5;
+    --over-color: #14ff2f;
+    --bg-color: #250821;
+    --second-bg-color: #292e33;
+    --big-font: 2.5rem;
+    --normal-font: 2rem;
+    --small-font: 1.5rem;
+    --neon-box-shadow: 0 0 .5rem #12ff2f;
+    --neon-box-shadow2: 0 0 2rem #12ff2f;
+    --h2-font: 3rem;
+    --font-neon-text-shadow: 0 0 10px rgba(18, 255, 69, 0.3),
+        0 0 20px rgba(18, 255, 69, 0.3),
+        0 0 30px rgba(18, 255, 69, 0.3),
+        0 0 40px rgba(18, 255, 69, 0.3),
+        0 0 70px rgba(18, 255, 69, 0.3),
+        0 0 80px rgba(18, 255, 69, 0.3),
+        0 0 100px rgba(18, 255, 69, 0.3),
+        0 0 150px rgba(18, 255, 69, 0.3);
+}

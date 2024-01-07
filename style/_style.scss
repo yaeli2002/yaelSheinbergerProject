@@ -51,67 +51,6 @@ body {
     color: var(--text-color);
 }
 
-/*.container {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 11vh 89vh 100vh 100vh 100vh 105vh 40px;
-    grid-template-areas:
-        "header"
-        "opening"
-        "about"
-        "skills"
-        "galery-projects"
-        "contact"
-        "bottom";
-    border-bottom: 5px solid #12f7ff;
-
-    @media (max-width:992px) {
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 11vh 89vh 110vh 170vh 270vh 105vh 50px;
-        grid-template-areas:
-            "header"
-            "opening"
-            "about"
-            "skills"
-            "galery-projects"
-            "contact"
-            "bottom";
-    }*/
-
-/* @media (max-width:768px) {
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 11vh 89vh 180vh 170vh 270vh 105vh 40px;
-        grid-template-areas: "header"
-            "opening"
-            "about"
-            "skills"
-            "galery-projects"
-            "contact"
-            "bottom";
-    }*/
-
-/*@media (max-width:576px) {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 11vh 89vh 140vh 150vh 270vh 105vh 40px;
-    grid-template-areas: "header"
-    "opening"
-    "about"
-    "skills"
-    "galery-projects"
-    "contact"
-    "bottom";
-}
-}*/
-
-
-
 span {
     color: var(--over-color);
 }

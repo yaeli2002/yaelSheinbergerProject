@@ -1,0 +1,159 @@
+@mixin global {
+    display: flex;
+    // Center the button vertically 
+    justify-content: center;
+    //Center the button horizontally
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container {
+    width: 100vw;
+    display: grid;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 11vh 40vh 10vh 85vh 5vh;
+    grid-template-areas:
+        "header"
+        "about-container"
+        "technogolia"
+        "project"
+        "bottom";
+
+    @include desktop {
+        grid-template-rows: 11vh 89vh 10vh 60vh 5vh;
+    }
+}
+
+/*------------------The header------------------*/
+/*@import '../../../style/header';*/
+@import '../../../../style/header';
+
+.myName {
+    font-family: "poppins", sans-serif;
+}
+
+/*--------------End header----------------*/
+
+
+/*-------------------The about project -------------------------*/
+.about-project-container {
+    grid-area: about-container;
+    background-size: cover;
+    background-image: url("../images/code_tree.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    flex-direction: column-reverse;
+    @include global;
+
+    .about-text {
+        @include global;
+        width: 80%;
+        color: var(--bg-color);
+        box-shadow: var(--neon-box-shadow);
+        background: linear-gradient(var(--over-color), rgba(37, 8, 33, .9));
+
+        @include tablet {
+            height: 60%;
+        }
+
+        section {
+            text-align: center;
+            line-height: 1.5;
+            transition: all 2s ease-in-out;
+            border-radius: 6px;
+
+            p {
+                text-align: right;
+            }
+
+            @include tablet {
+                width: 90%;
+            }
+
+
+        }
+    }
+
+    .btn-project {
+        @include global;
+        margin: 10px;
+
+        @include tablet {
+            display: contents;
+        }
+
+        a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 200px;
+            height: 100%;
+            background: var(--over-color);
+            color: var(--bg-color);
+            box-shadow: var(--neon-box-shadow);
+            border-radius: 10px;
+            transition: .6s;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            border: 3px solid var(--bg-color);
+            z-index: 100;
+
+            &:hover {
+                background-color: var(--bg-color);
+                color: var(--over-color);
+            }
+        }
+    }
+}
+
+/*-------------------End the about project -------------------------*/
+/*--------------------------The technology that built the project-----------------------------*/
+.technogolia {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dotted var(--over-color);
+    border-bottom: 2px dotted var(--over-color);
+}
+
+/*-------------------------------End the technology that built the project------------------------------------*/
+/*-------------------------The project's image-------------------*/
+.project {
+    @include global;
+
+    img {
+        display: block;
+        width: 1000px;
+        height: 500px;
+        box-shadow: 0px 0px 40px var(--over-color);
+
+        @include desktop {
+            width: 80%;
+            height: auto;
+        }
+    }
+}
+
+/*-------------------------End the project's image-------------------*/
+/*-------------------------The bottom-------------------------------*/
+@import '../../../../style/footer';
+/*.bottom {
+    color: var(--over-color);
+    border-top: 2px dotted var(--over-color);
+
+    p {
+        margin: 0 20px 0 20px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+}*/
+
+/*-------------------------End the bottom-------------------------------*/

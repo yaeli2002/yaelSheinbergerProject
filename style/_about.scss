@@ -1,5 +1,4 @@
 .about-container {
-    /*  grid-area: about;*/
     width: 100vw;
     padding: 100px 10vw;
     min-height: 100vh;
@@ -37,9 +36,7 @@
             font-size: var(--big-font);
             font-weight: 600;
 
-            /* @media (max-width:992px) {
-                font-size: var(--small-font);
-            }*/
+
         }
 
         .change-text {
@@ -47,17 +44,9 @@
             font-weight: 500;
             margin-bottom: 10px;
 
-
-            /*  @media (max-width:992px) {
-                font-size: 0.9rem;
-                font-weight: 400;
-            }*/
-
             .my-line {
                 @include mobile {
                     display: block;
-                    /*   margin-right: 100%;*/
-
                 }
 
             }
