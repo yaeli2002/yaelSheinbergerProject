@@ -99,8 +99,6 @@ const dealCardsPlayer2 = () => {
 const addCardPlayer1 = () => {
     cardChoose1 = 0;
     cardPlace.innerHTML = `<img src="${array2[cardChoose1].get('image')}" class="card-img-top" alt="...">`;
-    console.log(array2);
-    console.log("cardChoose1", cardChoose1);
     number1 = array2[cardChoose1].get('number');
 }
 
@@ -131,40 +129,35 @@ const number2Win = () => {
 /*If the cards are equal, you should go to the fourth card after the current card and compare whether they are equal.*/
 const equalValues = () => {
     let counter = 3;
-    number1 = array2[counter].get('number');
-    number2 = array3[counter].get('number');
+    number1 = array2[counter].number;
+    number2 = array3[counter].number;
     if (number1 > number2) {
-        console.log("The winner is player1", array2[3]);
         while (counter >= 0) {
             const removedCard = array3.splice(cardChoose2, 1);
             array2.push(removedCard[0]);
             const cardToMove = array2.shift();
             array2.push(cardToMove);
-            console.log("counter : " + counter);
             counter--;
         }
-        cardPlace.innerHTML = `<img src="${array2[0].get('image')}" class="card-img-top" alt="...">`;
-        number1 = array2[0].get('number');
+
     }
     else if (number2 > number1) {
-        console.log("The winner is player1", array3[3]);
         while (counter >= 0) {
             const removedCard = array2.splice(cardChoose1, 1);
             array3.push(removedCard[0]);
             const cardToMove = array3.shift();
             array3.push(cardToMove);
-            console.log("counter : " + counter);
             counter--;
         }
-        cardPlace2.innerHTML = `<img src="${array3[0].get('image')}" class="card-img-top" alt="...">`;
-        number2 = array3[0].get('number');
-        console.log("count2 " + count2);
+
     }
+    addCardPlayer1();
+    addCardPlayer2();
+    chechNumber();
 };
 
 /*Checking which card's value is higher.*/
 const chechNumber = () => {
-    console.log("number1 " + number1 + " number2 " + number2);
     if (number1 > number2) {
         number1Win();
     }
@@ -180,24 +173,29 @@ const chechNumber = () => {
 const startGame = () => {
     dealCardsPlayer1();
     dealCardsPlayer2();
+    countPlay1.innerHTML = `<span>Cards: ${count1}</span>`;
+    countPlay2.innerHTML = `<span>Cards: ${count2}</span>`;
 }
+
 startGame();
+
 /*The first player's turn*/
 Player1btn.addEventListener("click", () => {
     if (array2.length == 39) {
         alert("Player 1 win!!");
     }
     addCardPlayer1();
-    count1 = array2.length;
 });
+
 /*The second player's turn*/
 Player2btn.addEventListener("click", () => {
     if (array3.length == 39) {
         alert("Player 2 win!!");
     }
     addCardPlayer2();
+    chechNumber();
+    count1 = array2.length;
     count2 = array3.length;
-    setTimeout(chechNumber, 400);
     /*The amount of cards each player has.*/
     countPlay1.innerHTML = `<span>Cards: ${count1}</span>`;
     countPlay2.innerHTML = `<span>Cards: ${count2}</span>`;
