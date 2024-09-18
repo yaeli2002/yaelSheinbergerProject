@@ -149,3 +149,36 @@ function setActiveStyle(color) {
         }
     });
 }
+
+//Sending an email automatically to the interested party and the website owner. 
+const btn = document.getElementById('buttonSubmit');
+
+document.getElementById('contactForm')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        const serviceID = 'service_g95qduo';
+        const templateID = 'template_euhndsu';
+        const serviceID1 = 'service_c1psw0t';
+        const templateID1 = 'template_ijtzxbd';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('The message was sent successfully!');
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+
+
+        emailjs.sendForm(serviceID1, templateID1, this)
+            .then(() => {
+                btn.value = 'Send Email';
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+    });

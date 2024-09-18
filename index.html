@@ -9,7 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./style/color-2.css" class="alternate-style" title="color-2" disabled>
     <link rel="stylesheet" href="./style/color-3.css" class="alternate-style" title="color-3" disabled>
-
 </head>
 
 <body>
@@ -151,7 +150,7 @@
                     </div>
                     <div class="skill-bar">
                         <div class="info">
-                            <p>Css</p>
+                            <p>CSS3</p>
                             <p>85%</p>
                         </div>
                         <div class="bar">
@@ -197,7 +196,7 @@
                     <div class="skill-bar">
                         <div class="info">
                             <p>Python</p>
-                            <p>95%</p>
+                            <p>97%</p>
                         </div>
                         <div class="bar">
                             <span class="python"></span>
@@ -387,19 +386,20 @@
             <div class="contact-text">
                 <section>
                     <h2>Contact Us</h2>
-                    <p>Lorem Ipsum, or Lipsum for short, is a common and meaningless word that is used as a
-                        "placeholder"
-                        when editing.</p><br>
-                    <form action="">
-                        <label for="">full name:</label><br>
-                        <input type="text" name="" placeholder="first name + last name"><br><br>
+                    <h1>Get in Touch for More Details or Collaboration</h1>
+                    <p>Fill out the form below with your details and message, and I'll get back to you as soon as
+                        possible.<br> I'm excited to hear
+                        from you and explore potential opportunities together!</p><br>
+                    <form id="contactForm">
+                        <label for="" id="">full name:</label><br>
+                        <input type="text" id="fullName" name="fullName" placeholder="first name + last name"><br><br>
                         <label for="">email:</label><br>
-                        <input type="text" name="" placeholder="email"><br><br>
+                        <input type="text" id="clientEmail" name="clientEmail" placeholder="email"><br><br>
                         <label for="">phone:</label><br>
-                        <input type="text" name="" placeholder="phone number"><br><br>
+                        <input type="text" name="clientPhone" id="clientPhone" placeholder="phone number"><br><br>
                         <label for="">content of the message:</label><br>
-                        <textarea type="text" name="" maxlength="100"></textarea><br>
-                        <input class="sub" type="submit" value="Submit">
+                        <textarea name="msgContent" id="msgContent" type="text" maxlength="100"></textarea><br>
+                        <input class="sub" id="buttonSubmit" type="submit" value="Submit">
                     </form>
                 </section>
             </div>
@@ -429,6 +429,13 @@
         <!---------------End the style switcher-------------------->
     </div>
     <script src="./script/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('gr9pA51HYU3D3cyHM')
+    </script>
+
+
 </body>
 
 </html>
